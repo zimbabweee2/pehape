@@ -6,8 +6,6 @@ require "typy.php"
 // $ilosc = 15;
 // $promocja = false;
 
-foreach 
-
 const VAT = 0.23;
 $cenabrutto = ($cenanetto * (1 + VAT));
 
