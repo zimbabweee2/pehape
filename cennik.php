@@ -1,10 +1,10 @@
 <?php
 require "typy.php"
 
-// $nazwa  = "Mysz Razer";
-// $cenanetto = 199.00;
-// $ilosc = 15;
-// $promocja = false;
+$nazwa  = "Mysz Razer";
+$cenanetto = 199.00;
+$ilosc = 15;
+$promocja = false;
 
 const VAT = 0.23;
 $cenabrutto = ($cenanetto * (1 + VAT));
