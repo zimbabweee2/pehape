@@ -25,13 +25,16 @@ foreach ($produkty as $p) {
     }
 }
 
-echo $suma;
-echo "<br>";
-echo $brakuje;
-echo "<br>";
-echo $najdrozszy["nazwa"];
-echo "<br>";
-echo $znaleziony["nazwa"];
+echo "Wartość magazynu: "   
+    . number_format($suma, 2, ',', ' ') . " zł<br>";
+
+echo "Niedostępne: "
+    . $brakuje . "<br>";
+
+echo "Najdroższy produkt: "
+    . $najdrozszy["nazwa"] . "<br>";
+
+echo $znaleziony === null ? "Nie znaleziono" : "Znaleziono: " . $znaleziony["nazwa"] . "<br>";
 
 // po zmienieniu nazwy szukane na kabel hdmi 3m ktorego
 // nie ma wyswietla sie trying to access array offset on value of type null
