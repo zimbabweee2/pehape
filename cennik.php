@@ -1,5 +1,5 @@
 <?php
-require "typy.php"
+// require "typy.php"
 
 $nazwa  = "Mysz Razer";
 $cenanetto = 199.00;
