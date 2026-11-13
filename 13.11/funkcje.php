@@ -10,7 +10,6 @@ function cenaBrutto(float $cenaNetto, float $vat): float {
 $cenaNetto = 1000.00;
 $vat = 0.23;
 $cena = 1200.50;
-
 $rabat = 10;
 
 function cenaPoRabacie(float $cena): float {
