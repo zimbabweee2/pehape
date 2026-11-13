@@ -7,17 +7,17 @@ $produkty = [
         "cena" => 99.99
     ],
     [
-        "model" => "Myszka Silver Monkey",
+        "model" => "Słuchawki HyperX Cloud II",
         "kategoria" => "Peryferia",
-        "cena" => 99.99
+        "cena" => 289.99
     ],
         [
-        "model" => "Razer Deathadder Hyperspeed v3",
+        "model" => "Myszka Razer Deathadder Hyperspeed v3",
         "kategoria" => "Peryferia",
         "cena" => 299.99
     ],
     [
-        "model" => "Wooting 60he",
+        "model" => "Klawiatura Wooting 60HE",
         "kategoria" => "Peryferia",
         "cena" => 599.99
     ]
