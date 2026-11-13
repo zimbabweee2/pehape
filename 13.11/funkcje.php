@@ -1,4 +1,6 @@
 <?php
+include produkty.php;
+
 function formatCena(float $cena): string {
     return number_format($cena, 2, ',', '') . " zł<br>";
 }
@@ -23,6 +25,16 @@ function stanMagazynu(int $ilosc): string {
         $ilosc < 5 => "Ograniczona ilość<br>",
         default => "Dostępny<br>",
     };
+}
+
+function produktyNaMagazynie(array $produkty): array {
+    $produktyNaMagazynie = [];
+    foreach ($produkty as $produkt) {
+        if ($produkt[2] > 0) {
+            $produktyNaMagazynie[] = $produkt;
+        }
+    }
+    return $produktyNaMagazynie;
 }
 
 echo formatCena($cena);
