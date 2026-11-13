@@ -1,5 +1,10 @@
 <?php
-include produkty.php;
+include "produkty.php";
+
+$cenaNetto = 1000.00;
+$vat = 0.23;
+$cena = 1200.50;
+$rabat = 10;
 
 function formatCena(float $cena): string {
     return number_format($cena, 2, ',', '') . " zł<br>";
@@ -8,11 +13,6 @@ function formatCena(float $cena): string {
 function cenaBrutto(float $cenaNetto, float $vat): float {
     return $cenaNetto * (1 + $vat);
 }
-
-$cenaNetto = 1000.00;
-$vat = 0.23;
-$cena = 1200.50;
-$rabat = 10;
 
 function cenaPoRabacie(float $cena): float {
     global $rabat;
@@ -37,6 +37,14 @@ function produktyNaMagazynie(array $produkty): array {
     return $produktyNaMagazynie;
 }
 
+function wierszTabeliProduktow(array $produkt): string {
+    return "<tr>
+                <td>{$produkt[0]}</td>
+                <td>" . formatCena($produkt[1]) . "</td>
+                <td>{$produkt[2]}</td>
+            </tr>";
+}
+
 echo formatCena($cena);
 echo formatCena(cenaBrutto($cenaNetto, $vat));
 echo formatCena(cenaBrutto($cenaNetto, 0.08));
@@ -44,4 +52,8 @@ echo formatCena(cenaPoRabacie($cena));
 echo "Stan magazynu: " . stanMagazynu(0);
 echo "Stan magazynu: " . stanMagazynu(3);
 echo "Stan magazynu: " . stanMagazynu(10);
+include "tabela.php";
+foreach ($produkty as $produkt) { 
+    echo wierszTabeliProduktow($produkt);
+}
 ?>
